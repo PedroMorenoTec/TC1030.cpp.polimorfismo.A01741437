@@ -1,3 +1,4 @@
+#include "Polygon.hpp"
 #include "Rectangle.hpp"
 #include "Shape.hpp"
 #include "Circle.hpp"
@@ -6,7 +7,8 @@
 
 int main() 
 {
-  Shape* Fig[5];
+  const int SIZE = 5+2;
+  Shape* Fig[SIZE];
 
   Fig[0] = new Circle();
   Fig[1] = new Rectangle();
@@ -14,7 +16,10 @@ int main()
   Fig[3] = new Circle(4,2,1);
   Fig[4] = new Rectangle();
 
-  for(auto i=0; i < 5;i++) {
+  Fig[5] = new Polygon();
+  Fig[6] = new Polygon(5,1,2.5);
+
+  for(auto i=0; i < SIZE; i++) {
     Shape* current = Fig[i];
 
     std::cout << current->draw() << "\n";
@@ -22,7 +27,7 @@ int main()
 
 // Liberando memoria -------------------
 
-  for (auto i=0; i < 5;i++)
+  for (auto i=0; i < SIZE; i++)
   {
     delete Fig[i];
   }
