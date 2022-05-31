@@ -1,4 +1,5 @@
 #include "Rectangle.hpp"
+#include "Shape.hpp"
 
 Rectangle::Rectangle() {
     x=0;
@@ -7,7 +8,7 @@ Rectangle::Rectangle() {
     y1=0;
 }
 
-Rectangle::Rectangle(int valX, int valY, int valX1, int valY1) : Shape {valX, valY}
+Rectangle::Rectangle(int valX, int valY, int valX1, int valY1) : Shape (valX, valY)
 {
     x1 = valX1;
     y1 = valY1;

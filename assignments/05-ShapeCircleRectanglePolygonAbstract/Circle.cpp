@@ -5,7 +5,7 @@ Circle::Circle()
     r=0;
 }
 
-Circle::Circle(int valX, int valY, int valR) : Shape{valX, valY}
+Circle::Circle(int valX, int valY, int valR) : Shape(valX, valY)
 {
     r=valR;
 }
